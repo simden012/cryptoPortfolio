@@ -1,0 +1,98 @@
+:root {
+  --main-color: lightblue;
+  --navbar-color: rgb(255, 208, 0);
+  --text-color: black;
+}
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  background-color: #222;
+  color: #fff;
+}
+h1 {
+  text-align: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#container {
+  display: grid;
+  grid-template-areas:
+    "nav-bar main-area"
+    "footer footer";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0 0 0 0;
+}
+
+#nav-bar ul {
+  margin-right: 5px;
+  padding-left: 10px;
+  list-style: none;
+}
+
+#nav-bar {
+  grid-area: nav-bar;
+  height: 100%;
+  background-color: var(--navbar-color);
+}
+li a {
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: white;
+}
+
+li a:hover,
+.active-page {
+  text-decoration: underline;
+  background-color: var(--main-color);
+}
+
+ul li {
+  padding: 8px;
+}
+
+#nav-bar ul li {
+  padding: 20px 5px 20px 5px;
+}
+
+.tickerInput {
+  width: 125px;
+  margin-right: 20px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+button {
+  margin-right: 10px;
+}
+
+#buyButton {
+  background-color: green;
+  color: white;
+}
+
+#sellButton {
+  background-color: red;
+  color: white;
+}
+
+button {
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
